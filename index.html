@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alcoolique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">ALCOOLIQUE</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li class="dropdown">
+          <a href="#">Produtos ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Vinhos</a></li>
+            <li><a href="#">Destilados</a></li>
+            <li><a href="#">Cervejas</a></li>
+          </ul>
+        </li>
+        <li><a href="login.php" class="login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carousel">
+      <img src="img/Vinho.png" class="slide" alt="Vinho">
+      <img src="img/Whisky.png" class="slide" alt="Whisky">
+      <img src="img/Coquetel.png" class="slide" alt="Coquetel">
+    </section>
+
+    <section class="welcome">
+      <h1>Bem-vindo à Alcoolique</h1>
+      <p>Sua loja online de bebidas premium.</p>
+    </section>
+  </main>
+
+  <script>
+    // Carrossel simples automático
+    let current = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    setInterval(() => {
+      slides.forEach((slide, index) => {
+        slide.style.display = (index === current) ? "block" : "none";
+      });
+      current = (current + 1) % slides.length;
+    }, 3000);
+  </script>
+</body>
+</html>

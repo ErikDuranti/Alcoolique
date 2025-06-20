@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #121212;
+  color: #d4af37;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 20px 50px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d4af37;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.login-btn {
+  border: 1px solid #d4af37;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  padding: 10px 0;
+  min-width: 150px;
+}
+
+.dropdown-content li {
+  padding: 8px 20px;
+}
+
+.dropdown-content li a {
+  color: #d4af37;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.carousel {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+}
+  
+.carousel .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    width: 100%;
+    height: 80%;
+  
+    background-size: cover;
+    background-position: center center; /* CENTRALIZA */
+    background-repeat: no-repeat;
+  
+    display: none;
+}
+
+.welcome {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.welcome h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.welcome p {
+  font-size: 20px;
+  color: #fff;
+}
